@@ -9,12 +9,10 @@ const images = [
 
 const galeryEL = document.querySelector(".gallery")
 
-const imageEL = document.createElement("img") 
-imageEL.url = images[0].url
-imageEL.alt=images[0].alt
+galeryEL.style.display="flex";
+galeryEL.style.width="100px";
 
-
-const markup = images.map ((image) => `<li> ${imageEL} </li>` )
+const markup = images.map((image) => `<li> <img src="${image.url}" alt="${image.alt}" width = "700"> </li>`).join("")
 
 galeryEL.insertAdjacentHTML("beforebegin", markup)
 
