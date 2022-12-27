@@ -11,8 +11,14 @@
 
 const buttonEl = document.querySelector(".change-color")
 const colorEl = document.querySelector(".color")
+const backgroundColor = getRandomHexColor();
 
-buttonEl.addEventListener("click",getRandomHexColor)
+
+document.body.style.backgroundColor = backgroundColor;
+
+colorEl.textContent = backgroundColor
+
+buttonEl.addEventListener("click",buttonClick)
 
 
 function getRandomHexColor() {
@@ -20,3 +26,14 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+function buttonClick () {
+  const backgroundColor = getRandomHexColor();
+  document.body.style.backgroundColor = backgroundColor;
+  colorEl.textContent = backgroundColor
+}
+
+
+
+
+

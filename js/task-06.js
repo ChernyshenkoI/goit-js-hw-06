@@ -22,19 +22,16 @@
 //   border-color: #f44336;
 // }
 
-const inputEl = document.querySelector("input")
+// const inputEl = document.querySelector("input")
 const validationINP = document.querySelector("#validation-input" )
 
-inputEl.addEventListener("blur", onFormSubmit)
+validationINP.addEventListener("blur", onFormSubmit)
 
 function onFormSubmit (event){
-    if (inputEl.data-length === inputEl.data-length){
-        validationINP.valid 
+
+    if (validationINP.value.length == validationINP.dataset.length){
+        validationINP.classList ="valid"
     } else {
-        validationINP.invalid
+        validationINP.classList ="invalid"
     }
 }
-
-
-console.log('inputEl :>> ', inputEl);
-console.log('validationINP :>> ', validationINP);

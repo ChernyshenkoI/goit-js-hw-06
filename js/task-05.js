@@ -2,19 +2,20 @@
 // підставляє його поточне значення в span#name-output. Якщо інпут порожній, у спані повинен відображатися рядок "Anonymous".
 
 
-const refs = {
-    input: document.getElementById("name-input"),
-    output: document.getElementById("name-output"),
-}
+const inputName = document.querySelector("#name-input");
+const greetName = document.querySelector("#name-output");
 
-refs.input.addEventListener('input', onInputChange)
+inputName.addEventListener('input', (event) => {
+    const inputText = event.currentTarget.value
+    greetName.textContent = inputText;
+    
+    if (inputText.length === 0) {
+        greetName.textContent = "Anonymous"
+    }
+});
 
 
-function onInputChange (event){
-    refs.output.textContent =  event.currentTarget.value
-    console.log('event.currentTarget.value :>> ', event.currentTarget.value);
-}
 
 
-console.log('refs.input :>> ', refs.input);
-console.log('refs.output :>> ', refs.output);
+
+
