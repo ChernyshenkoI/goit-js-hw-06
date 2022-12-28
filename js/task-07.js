@@ -11,13 +11,9 @@ const textEl= document.querySelector("#text")
 
 increaseEL.addEventListener("input", onChange)
 
-function onChange (){
-    const result = increaseEL.value;
-    textEl.style.fontSize = result + "px"
+function onChange (e){
+    textEl.style.fontSize = `${e.currentTarget.value}px`
 }
-
-console.log('increaseEL :>> ', increaseEL);
-console.log('textEl :>> ', textEl);
 
 
 

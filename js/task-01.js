@@ -5,8 +5,8 @@ let listCategories = document.getElementsByClassName("item");
  console.log("Categories number: " + catNumber)
 
 for (let listCategory of listCategories) {
-   console.log("Category: " +  listCategory.childNodes[1].innerText);
-   console.log("Elements: " +  listCategory.childNodes[3].children.length);
+   console.log("Category: " +  listCategory.firstElementChild.innerText);
+   console.log("Elements: " +  listCategory.lastElementChild.length);
 
 }
 

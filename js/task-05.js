@@ -9,7 +9,7 @@ inputName.addEventListener('input', (event) => {
     const inputText = event.currentTarget.value
     greetName.textContent = inputText;
     
-    if (inputText.length === 0) {
+    if (!inputText.length) {
         greetName.textContent = "Anonymous"
     }
 });
